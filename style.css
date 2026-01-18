@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(26, 11, 46, 1) ;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    
+}
+nav h1{
+    color: white;
+}
+nav ul a{
+    text-decoration: none;
+    margin-right: 30px;
+    color: white;
+}
+nav button{
+    background: linear-gradient(45deg,#F7E342,#FA369D,#9500F6);
+    padding: 5px 8px;
+    border-radius: 18px;
+    color: white;
+    cursor: pointer;
+    transition: background 1s ease-in;
+}
+nav button:hover{
+    background: #6B2FB5;
+}
+nav .menu{
+    display: hidden;
+}
+
+nav .menu{
+    display: none; 
+}
+
+@media screen and (max-width:576px) { 
+    nav .menu{
+        display: block;
+    }
+    nav ul{
+        display: none;
+    }
+    nav button{
+        display: none;
+    }
+}
+
+
