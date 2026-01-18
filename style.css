@@ -38,13 +38,78 @@ nav button:hover{
     background: #6B2FB5;
 }
 nav .menu{
-    display: hidden;
-}
-
-nav .menu{
     display: none; 
 }
 
+.hero{
+    background-image: url("assets/hero-bg.png");
+    background-color: rgba(26, 11, 46, 1);
+    background-size: cover;
+    background-position: center;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-mic{
+    background-image: url("assets/hero-circle.png");
+}
+
+.hero h2{
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero p{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.hero-buttons{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-buttons button{
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.6s ease;
+}
+
+.hero-buttons .spotify-btn{
+    background: linear-gradient(45deg,#F7E342,#FA369D,#9500F6);
+    color: white;
+}
+
+.hero-buttons .subscribe-btn{
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #00FFA3;
+    color: #00FFA3;
+}
+
+.hero-buttons button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(250, 54, 157, 0.4);
+}
+
+/* Responsive */
 @media screen and (max-width:576px) { 
     nav .menu{
         display: block;
@@ -55,6 +120,28 @@ nav .menu{
     nav button{
         display: none;
     }
+    
+    .hero-mic-container{
+        width: 200px;
+        height: 200px;
+    }
+    
+    .hero h2{
+        font-size: 2rem;
+    }
+    
+    .hero-mic-container img{
+        width: 150px;
+        height: 150px;
+    }
+    
+    .hero-buttons{
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-buttons button{
+        width: 100%;
+        max-width: 300px;
+    }
 }
-
-
