@@ -168,27 +168,29 @@ hr{
     gap: 12px;
 }
 .reasons .premium{
-    grid-area: premium;
+    grid-row: 1/3;
+    grid-column: 1/2;
 }
 .reasons .mobile{
-    grid-area: mobile;
+    grid-row: 1/2;
+    grid-column: 2/4;
 }
 .reasons .global{
-    grid-area: global;
+    grid-row: 2/3;
+    grid-column: 2/4;
 }                                     
 .reasons .exclusive{
-    grid-area: exclusive;
+    grid-row: 3/4;
+    grid-column: 1/3;
 }
 .reasons .rich{
-    grid-area: rich;
+    grid-row: 3/4;
+    grid-column: 3/4;
 }
 .reasons{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "premium mobile mobile"
-                         "premium global global"
-                         "exclusive exclusive rich";
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
@@ -255,14 +257,16 @@ hr{
         grid-template-columns: repeat(2,1fr);
     }
     .reasons{
-        grid-template-columns: 1fr;
-        grid-template-areas: "premium"
-                             "mobile"
-                             "global"
-                             "exclusive"
-                             "rich";
-        
+        grid-template-columns: repeat(1,1fr);
         padding: 40px 20px;
         gap: 20px;
+    }
+    .reasons .premium,
+    .reasons .mobile,
+    .reasons .global,
+    .reasons .exclusive,
+    .reasons .rich {
+        grid-row: auto;
+        grid-column: auto;
     }
 }
