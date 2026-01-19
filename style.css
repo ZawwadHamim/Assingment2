@@ -6,6 +6,16 @@
 body{
     background-color: #1A0C30;
 }
+.wave{
+    color: white;
+    transition: all 0.8s ease-in-out;
+}
+.wave:hover{
+    color: #FA369D;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 5px #FA369D;
+    padding: 0 6px;
+}
 .inter {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -21,9 +31,6 @@ nav ul{
     list-style: none;
     display: flex;
     
-}
-nav h1{
-    color: white;
 }
 nav ul a{
     text-decoration: none;
@@ -60,11 +67,32 @@ nav .menu{
 
 .hero-mic{
     background-image: url("assets/hero-circle.png");
-    background-size: contain;
+    background-size: cover;
     background-position: center;
-    z-index: 2;
+    z-index: 999;
+    height: 220px;
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+.hero-mic img{
+    width: 80px;
+    
+}
+.smth{
+    position: relative;
+}
+.new{
+    color:black;
+    background-color: #00FFA3;
+    padding: 4px 6px;
+    border-radius: 6px;
+    position: absolute;
+    top: 16px;
+    right: 10px;
+    z-index: 9999999999999;
+}
 .hero h2{
     font-size: 3rem;
     color: white;
@@ -214,9 +242,9 @@ hr{
     height: 3rem;
    }
    
-   .reasons i {
-       font-size: 2.5rem;
-       color: #FA369D;
+.reasons i {
+    font-size: 2.5rem;
+    color: #FA369D;
    }
 
 .featured{
@@ -353,6 +381,11 @@ hr{
     justify-content: center;
     gap: 8px;
     margin-bottom: 32px;
+    transition: all 0.6s ease-in;
+}
+.social:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
 }
 .social h4{
     color:#FAFAFA;
